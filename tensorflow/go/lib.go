@@ -19,3 +19,12 @@ package tensorflow
 // #cgo LDFLAGS: -L${SRCDIR} -lgo-tensorflow
 // #cgo CFLAGS: -I${SRCDIR}/../../
 import "C"
+
+// `go mod vendor` doesn't keep the C headers if we don't use the package
+import (
+	// main TF header
+	_ "github.com/taufik-rama/go-tensorflow/tensorflow/c"
+
+	// eager TF header
+	_ "github.com/taufik-rama/go-tensorflow/tensorflow/c/eager"
+)
