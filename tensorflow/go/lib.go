@@ -16,6 +16,6 @@ limitations under the License.
 
 package tensorflow
 
-// #cgo LDFLAGS: -L${SRCDIR}/../../lib -lgo-tensorflow
+// #cgo LDFLAGS: -L${SRCDIR} -lgo-tensorflow
 // #cgo CFLAGS: -I${SRCDIR}/../../
 import "C"
